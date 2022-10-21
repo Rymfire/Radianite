@@ -14,6 +14,11 @@
 		02D8E81A28FDB4A4006ACD69 /* RadianiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8E81928FDB4A4006ACD69 /* RadianiteTests.swift */; };
 		02D8E82428FDB4A4006ACD69 /* RadianiteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8E82328FDB4A4006ACD69 /* RadianiteUITests.swift */; };
 		02D8E82628FDB4A4006ACD69 /* RadianiteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8E82528FDB4A4006ACD69 /* RadianiteUITestsLaunchTests.swift */; };
+		02D8E83728FE9879006ACD69 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8E83628FE9879006ACD69 /* Agent.swift */; };
+		02D8E83928FE9F68006ACD69 /* AgentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8E83828FE9F68006ACD69 /* AgentService.swift */; };
+		02D8E83D28FEA8D1006ACD69 /* AgentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8E83C28FEA8D1006ACD69 /* AgentsViewModel.swift */; };
+		02D8E84028FEA9FC006ACD69 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8E83F28FEA9FC006ACD69 /* Protocols.swift */; };
+		02D8E84228FEE6D7006ACD69 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8E84128FEE6D7006ACD69 /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		02D8E81F28FDB4A4006ACD69 /* RadianiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RadianiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D8E82328FDB4A4006ACD69 /* RadianiteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadianiteUITests.swift; sourceTree = "<group>"; };
 		02D8E82528FDB4A4006ACD69 /* RadianiteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadianiteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		02D8E83628FE9879006ACD69 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
+		02D8E83828FE9F68006ACD69 /* AgentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentService.swift; sourceTree = "<group>"; };
+		02D8E83C28FEA8D1006ACD69 /* AgentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentsViewModel.swift; sourceTree = "<group>"; };
+		02D8E83F28FEA9FC006ACD69 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		02D8E84128FEE6D7006ACD69 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +105,11 @@
 		02D8E80628FDB4A1006ACD69 /* Radianite */ = {
 			isa = PBXGroup;
 			children = (
-				02D8E80728FDB4A1006ACD69 /* RadianiteApp.swift */,
-				02D8E80928FDB4A1006ACD69 /* ContentView.swift */,
+				02D8E83E28FEA9F0006ACD69 /* Utils */,
+				02D8E83528FE97AD006ACD69 /* App */,
+				02D8E83428FE979E006ACD69 /* Views */,
+				02D8E83328FE9795006ACD69 /* Models */,
+				02D8E83228FE9782006ACD69 /* Services */,
 				02D8E80B28FDB4A4006ACD69 /* Assets.xcassets */,
 				02D8E80D28FDB4A4006ACD69 /* Radianite.entitlements */,
 				02D8E80E28FDB4A4006ACD69 /* Preview Content */,
@@ -127,6 +140,48 @@
 				02D8E82528FDB4A4006ACD69 /* RadianiteUITestsLaunchTests.swift */,
 			);
 			path = RadianiteUITests;
+			sourceTree = "<group>";
+		};
+		02D8E83228FE9782006ACD69 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				02D8E83828FE9F68006ACD69 /* AgentService.swift */,
+				02D8E84128FEE6D7006ACD69 /* Endpoint.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		02D8E83328FE9795006ACD69 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				02D8E83628FE9879006ACD69 /* Agent.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		02D8E83428FE979E006ACD69 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				02D8E80928FDB4A1006ACD69 /* ContentView.swift */,
+				02D8E83C28FEA8D1006ACD69 /* AgentsViewModel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		02D8E83528FE97AD006ACD69 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				02D8E80728FDB4A1006ACD69 /* RadianiteApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		02D8E83E28FEA9F0006ACD69 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				02D8E83F28FEA9FC006ACD69 /* Protocols.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +314,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02D8E83D28FEA8D1006ACD69 /* AgentsViewModel.swift in Sources */,
+				02D8E83728FE9879006ACD69 /* Agent.swift in Sources */,
+				02D8E83928FE9F68006ACD69 /* AgentService.swift in Sources */,
 				02D8E80A28FDB4A1006ACD69 /* ContentView.swift in Sources */,
 				02D8E80828FDB4A1006ACD69 /* RadianiteApp.swift in Sources */,
+				02D8E84228FEE6D7006ACD69 /* Endpoint.swift in Sources */,
+				02D8E84028FEA9FC006ACD69 /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

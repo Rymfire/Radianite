@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = ContentView.AgentsViewModel()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            List(viewModel.agents, id: \.self) { agent in
+                Text(agent.displayName)
+            }
         }
-        .padding()
+        .task {
+            await viewModel.getAgents()
+        }
     }
 }
 
