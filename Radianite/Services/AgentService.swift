@@ -8,14 +8,6 @@
 import Foundation
 
 class AgentService {
-    func getAgents_() async -> [Agent] {
-        return [
-            Agent(uuid: "1", displayName: "Rayna", description: "Ipsum Lorem"),
-            Agent(uuid: "1", displayName: "Rayna", description: "Ipsum Lorem"),
-            Agent(uuid: "1", displayName: "Rayna", description: "Ipsum Lorem")
-        ]
-    }
-    
     func getAgents(completion: @escaping (Result<[Agent], Error>) -> Void) async {
         let session = URLSession.shared
         

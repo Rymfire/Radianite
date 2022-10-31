@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0216354D29068644002321DF /* AgentDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216354C29068644002321DF /* AgentDetailsView.swift */; };
+		0293633F290696F5007C8839 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0293633E290696F5007C8839 /* ColorExt.swift */; };
+		02C9B3AA2908160000113BCF /* AgentHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C9B3A92908160000113BCF /* AgentHeader.swift */; };
+		02C9B3AC290817BB00113BCF /* AgentAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C9B3AB290817BB00113BCF /* AgentAvatar.swift */; };
+		02D8BBF629101B5F00208B7B /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8BBF529101B5F00208B7B /* StringExt.swift */; };
 		02D8E80828FDB4A1006ACD69 /* RadianiteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8E80728FDB4A1006ACD69 /* RadianiteApp.swift */; };
-		02D8E80A28FDB4A1006ACD69 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8E80928FDB4A1006ACD69 /* ContentView.swift */; };
+		02D8E80A28FDB4A1006ACD69 /* AgentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8E80928FDB4A1006ACD69 /* AgentsView.swift */; };
 		02D8E80C28FDB4A4006ACD69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02D8E80B28FDB4A4006ACD69 /* Assets.xcassets */; };
 		02D8E81028FDB4A4006ACD69 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02D8E80F28FDB4A4006ACD69 /* Preview Assets.xcassets */; };
 		02D8E81A28FDB4A4006ACD69 /* RadianiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8E81928FDB4A4006ACD69 /* RadianiteTests.swift */; };
@@ -19,6 +24,7 @@
 		02D8E83D28FEA8D1006ACD69 /* AgentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8E83C28FEA8D1006ACD69 /* AgentsViewModel.swift */; };
 		02D8E84028FEA9FC006ACD69 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8E83F28FEA9FC006ACD69 /* Protocols.swift */; };
 		02D8E84228FEE6D7006ACD69 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8E84128FEE6D7006ACD69 /* Endpoint.swift */; };
+		02D8E8442902CAC7006ACD69 /* AgentListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D8E8432902CAC7006ACD69 /* AgentListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0216354C29068644002321DF /* AgentDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentDetailsView.swift; sourceTree = "<group>"; };
+		0293633E290696F5007C8839 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
+		02C9B3A92908160000113BCF /* AgentHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentHeader.swift; sourceTree = "<group>"; };
+		02C9B3AB290817BB00113BCF /* AgentAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentAvatar.swift; sourceTree = "<group>"; };
+		02D8BBF529101B5F00208B7B /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
 		02D8E80428FDB4A1006ACD69 /* Radianite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Radianite.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D8E80728FDB4A1006ACD69 /* RadianiteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadianiteApp.swift; sourceTree = "<group>"; };
-		02D8E80928FDB4A1006ACD69 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		02D8E80928FDB4A1006ACD69 /* AgentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentsView.swift; sourceTree = "<group>"; };
 		02D8E80B28FDB4A4006ACD69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02D8E80D28FDB4A4006ACD69 /* Radianite.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Radianite.entitlements; sourceTree = "<group>"; };
 		02D8E80F28FDB4A4006ACD69 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -55,6 +66,7 @@
 		02D8E83C28FEA8D1006ACD69 /* AgentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentsViewModel.swift; sourceTree = "<group>"; };
 		02D8E83F28FEA9FC006ACD69 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		02D8E84128FEE6D7006ACD69 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		02D8E8432902CAC7006ACD69 /* AgentListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +94,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0216354A29068609002321DF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				02D8E80928FDB4A1006ACD69 /* AgentsView.swift */,
+				02D8E83C28FEA8D1006ACD69 /* AgentsViewModel.swift */,
+				02D8E8432902CAC7006ACD69 /* AgentListItem.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0216354B29068615002321DF /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				0216354C29068644002321DF /* AgentDetailsView.swift */,
+				02C9B3A92908160000113BCF /* AgentHeader.swift */,
+				02C9B3AB290817BB00113BCF /* AgentAvatar.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		02D8E7FB28FDB4A1006ACD69 = {
 			isa = PBXGroup;
 			children = (
@@ -162,8 +194,8 @@
 		02D8E83428FE979E006ACD69 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				02D8E80928FDB4A1006ACD69 /* ContentView.swift */,
-				02D8E83C28FEA8D1006ACD69 /* AgentsViewModel.swift */,
+				0216354B29068615002321DF /* Details */,
+				0216354A29068609002321DF /* Home */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +212,8 @@
 			isa = PBXGroup;
 			children = (
 				02D8E83F28FEA9FC006ACD69 /* Protocols.swift */,
+				0293633E290696F5007C8839 /* ColorExt.swift */,
+				02D8BBF529101B5F00208B7B /* StringExt.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -314,10 +348,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02D8E8442902CAC7006ACD69 /* AgentListItem.swift in Sources */,
+				02D8BBF629101B5F00208B7B /* StringExt.swift in Sources */,
+				0293633F290696F5007C8839 /* ColorExt.swift in Sources */,
+				02C9B3AC290817BB00113BCF /* AgentAvatar.swift in Sources */,
 				02D8E83D28FEA8D1006ACD69 /* AgentsViewModel.swift in Sources */,
 				02D8E83728FE9879006ACD69 /* Agent.swift in Sources */,
+				0216354D29068644002321DF /* AgentDetailsView.swift in Sources */,
+				02C9B3AA2908160000113BCF /* AgentHeader.swift in Sources */,
 				02D8E83928FE9F68006ACD69 /* AgentService.swift in Sources */,
-				02D8E80A28FDB4A1006ACD69 /* ContentView.swift in Sources */,
+				02D8E80A28FDB4A1006ACD69 /* AgentsView.swift in Sources */,
 				02D8E80828FDB4A1006ACD69 /* RadianiteApp.swift in Sources */,
 				02D8E84228FEE6D7006ACD69 /* Endpoint.swift in Sources */,
 				02D8E84028FEA9FC006ACD69 /* Protocols.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension ContentView {
+extension AgentsView {
     class AgentsViewModel: ViewModel {
         @Published var agents = [Agent]()
         
