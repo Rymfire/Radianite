@@ -8,6 +8,7 @@
 import Foundation
 
 extension String {
+    // TODO: tests
     func removeCharacters(_ characters: Set<Character>) -> String {
         var str = self
         str.removeAll(where: { characters.contains($0) })

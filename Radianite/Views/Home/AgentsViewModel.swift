@@ -7,21 +7,19 @@
 
 import Foundation
 
-extension AgentsView {
-    class AgentsViewModel: ViewModel {
-        @Published var agents = [Agent]()
-        
-        let service = AgentService()
-        
-        func getAgents() async {
-            await service.getAgents { result in
-                switch result {
-                case .success(let agentsData):
-                    self.agents = agentsData
-                case .failure(_):
-                    // error handling
-                    return
-                }
+class AgentsViewModel: ViewModel { // TODO: tests
+    @Published var agents = [Agent]()
+
+    let service = AgentService()
+
+    func getAgents() async {
+        await service.getAgents { result in
+            switch result {
+            case .success(let agentsData):
+                self.agents = agentsData
+            case .failure(_):
+                // error handling
+                return
             }
         }
     }

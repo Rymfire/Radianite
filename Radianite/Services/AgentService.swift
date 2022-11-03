@@ -18,7 +18,7 @@ class AgentService {
         
         session.dataTask(with: url) { (data, response, error) in
             
-            // Check statusCode == 2xx
+            // TODO: Check statusCode == 2xx
             
             print("Data received")
 
@@ -34,7 +34,7 @@ class AgentService {
             } catch let jsonError {
                 print("error: \(jsonError)")
                 return
-                // error handler -> convertion failed
+                // TODO: error handler -> convertion failed
             }
         }.resume()
     }

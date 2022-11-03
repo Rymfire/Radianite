@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AgentAvatar: View {
     let agent: Agent
+    // TODO: agentIcon
     
     var body: some View {
         AsyncImage(url: URL(string: agent.displayIcon)) { image in

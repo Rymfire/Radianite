@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AgentsView: View {
-    @StateObject var viewModel = AgentsView.AgentsViewModel()
+    @StateObject var viewModel = AgentsViewModel()
     
     var body: some View {
         NavigationView {
@@ -16,6 +16,7 @@ struct AgentsView: View {
                 List {
                     ForEach (viewModel.agents, id: \.self) { agent in
                         NavigationLink {
+                            // TODO: Implement Presenter
                             AgentDetailsView(agent: agent)
                         } label: {
                             AgentListItem(agent: agent)

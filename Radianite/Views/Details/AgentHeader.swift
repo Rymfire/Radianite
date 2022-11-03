@@ -9,6 +9,9 @@ import SwiftUI
 
 struct AgentHeader: View {
     let agent: Agent
+    // TODO: agentName
+    // TODO: agentBackground
+
     
     var body: some View {
         Color(agent.displayName.removeCharacters(["/"]))
