@@ -12,7 +12,8 @@ struct AgentResponse: Model {
     let data: [Agent]
 }
 
-struct Agent: Model {
+struct Agent: Model, Identifiable {
+    var id: String { self.uuid }
     let uuid: String
     let displayName: String
     let description: String
