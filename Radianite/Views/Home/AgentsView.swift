@@ -12,18 +12,17 @@ struct AgentsView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                List {
-                    ForEach (viewModel.agents, id: \.self) { agent in
-                        NavigationLink {
-                            // TODO: Implement Presenter
-                            AgentDetailsView(agent: agent)
-                        } label: {
-                            AgentListItem(agent: agent)
-                        }
+            List {
+                ForEach (viewModel.agents, id: \.self) { agent in
+                    NavigationLink {
+                        // TODO: Implement Presenter
+                        AgentDetailsView(agent: agent)
+                    } label: {
+                        AgentListItem(agent: agent)
                     }
                 }
             }
+            .navigationTitle("Valorant Agents")
             .task {
                 await viewModel.getAgents()
             }
