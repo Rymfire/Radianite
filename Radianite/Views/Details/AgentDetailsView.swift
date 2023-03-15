@@ -10,6 +10,7 @@ import SwiftUI
 struct AgentDetailsView: View {
     
     let agent: Agent
+    @State var selectedAbilityTab: Tabs = .ability1
 
     var body: some View {
         GeometryReader { reader in

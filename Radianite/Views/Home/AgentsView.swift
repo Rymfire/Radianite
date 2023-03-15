@@ -23,14 +23,24 @@ struct AgentsView: View {
                     }
                 }
             }
+            .navigationTitle("Agents")
             .task {
                 await viewModel.getAgents()
             }
+            .toolbar {
+                NavigationLink {
+                    CameraView()
+                } label: {
+                    Image(systemName: "camera.fill")
+                        .foregroundColor(.black)
+                }
+            }
         }
+
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct AgentsView_Previews: PreviewProvider {
     static var previews: some View {
         AgentsView()
     }

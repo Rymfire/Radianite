@@ -22,9 +22,16 @@ struct Agent: Model, Identifiable {
     let background: String
     let backgroundGradientColors: [String]
     let role: Role
+    let abilities: [Ability]
 }
 
 struct Role: Model {
     let displayName: String
     let description: String
+}
+
+struct Ability: Model {
+    let displayName: String
+    let description: String
+    let displayIcon: String?
 }
