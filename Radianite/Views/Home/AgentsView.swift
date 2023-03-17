@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Radianite
 //
-//  Created by ippon on 17/10/2022.
+//  Created by ippon on 17/10/2022
 //
 
 import SwiftUI
@@ -22,15 +22,24 @@ struct AgentsView: View {
                     }
                 }
             }
-            .navigationTitle("Valorant Agents")
+            .navigationTitle("Agents")
             .task {
                 await viewModel.getAgents()
             }
+            .toolbar {
+                NavigationLink {
+                    CameraView(cameraVM: CameraViewModel())
+                } label: {
+                    Image(systemName: "camera.fill")
+                        .foregroundColor(.black)
+                }
+            }
         }
+
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct AgentsView_Previews: PreviewProvider {
     static var previews: some View {
         AgentsView()
     }
