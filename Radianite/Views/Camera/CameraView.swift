@@ -13,40 +13,52 @@ struct CameraView: View {
     var body: some View {
         ZStack {
             // TODO: Camera ...
-            Color.black
+            CameraPreview(cameraVM: cameraVM)
                 .ignoresSafeArea(.all, edges: .all)
             VStack {
                 Spacer()
                 if cameraVM.isPictureTaken {
                     HStack {
                         Spacer()
-                        Button { } label: {
-                            Text("Save")
-                                .foregroundColor(.black)
-                                .fontWeight(.semibold)
-                                .padding(.vertical, 8)
-                                .padding(.horizontal, 16)
-                                .background(.white)
-                                .clipShape(Capsule())
+                        HStack {
+                            Spacer()
+                            cancelPictureButton
+                            Spacer()
                         }
-                        .padding(.trailing, 16)
+                        .padding(.horizontal, 16)
                     }
                 } else {
-                    Button { cameraVM.isPictureTaken.toggle() } label: {
-                        ZStack {
-                            Circle()
-                                .foregroundColor(.white)
-                                .frame(width: 68, height: 68)
-                            Circle()
-                                .stroke(.white, lineWidth: 2)
-                                .frame(width: 75, height: 75)
-                        }
-                    }
+                    takePictureButton
                 }
             }
         }
         .onAppear {
             cameraVM.checkAuthorization()
+        }
+    }
+
+    var cancelPictureButton: some View {
+        Button { cameraVM.reTakePicture() } label: {
+            Text("Retake")
+                .foregroundColor(.black)
+                .fontWeight(.semibold)
+                .padding(.vertical, 8)
+                .padding(.horizontal, 16)
+                .background(.white)
+                .clipShape(Capsule())
+        }
+    }
+
+    var takePictureButton: some View {
+        Button { cameraVM.takePicture() } label: {
+            ZStack {
+                Circle()
+                    .foregroundColor(.white)
+                    .frame(width: 68, height: 68)
+                Circle()
+                    .stroke(.white, lineWidth: 2)
+                    .frame(width: 75, height: 75)
+            }
         }
     }
 

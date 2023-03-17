@@ -10,7 +10,6 @@
 		0216354D29068644002321DF /* AgentDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216354C29068644002321DF /* AgentDetailsView.swift */; };
 		025D57AA2912B09400DD9B66 /* AbilitiesTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025D57A92912B09400DD9B66 /* AbilitiesTabs.swift */; };
 		027E63C229B623100077A1CC /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027E63C129B623100077A1CC /* CameraView.swift */; };
-		027E63C429B626C10077A1CC /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027E63C329B626C10077A1CC /* CameraModel.swift */; };
 		027E63C629B6271A0077A1CC /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027E63C529B6271A0077A1CC /* CameraViewModel.swift */; };
 		0293633F290696F5007C8839 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0293633E290696F5007C8839 /* ColorExt.swift */; };
 		02C9B3AA2908160000113BCF /* AgentHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C9B3A92908160000113BCF /* AgentHeader.swift */; };
@@ -53,7 +52,6 @@
 		0216354C29068644002321DF /* AgentDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentDetailsView.swift; sourceTree = "<group>"; };
 		025D57A92912B09400DD9B66 /* AbilitiesTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilitiesTabs.swift; sourceTree = "<group>"; };
 		027E63C129B623100077A1CC /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		027E63C329B626C10077A1CC /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
 		027E63C529B6271A0077A1CC /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		0293633E290696F5007C8839 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
 		02C9B3A92908160000113BCF /* AgentHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentHeader.swift; sourceTree = "<group>"; };
@@ -210,7 +208,6 @@
 			isa = PBXGroup;
 			children = (
 				02D8E83628FE9879006ACD69 /* Agent.swift */,
-				027E63C329B626C10077A1CC /* CameraModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -380,7 +377,6 @@
 				027E63C229B623100077A1CC /* CameraView.swift in Sources */,
 				02C9B3AC290817BB00113BCF /* AgentAvatar.swift in Sources */,
 				02D8E83D28FEA8D1006ACD69 /* AgentsViewModel.swift in Sources */,
-				027E63C429B626C10077A1CC /* CameraModel.swift in Sources */,
 				02D8E83728FE9879006ACD69 /* Agent.swift in Sources */,
 				025D57AA2912B09400DD9B66 /* AbilitiesTabs.swift in Sources */,
 				0216354D29068644002321DF /* AgentDetailsView.swift in Sources */,
@@ -545,6 +541,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Radianite/Radianite.entitlements;
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -587,6 +584,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Radianite/Radianite.entitlements;
 				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;

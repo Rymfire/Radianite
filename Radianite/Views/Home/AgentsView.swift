@@ -29,7 +29,7 @@ struct AgentsView: View {
             }
             .toolbar {
                 NavigationLink {
-                    CameraView()
+                    CameraView(cameraVM: CameraViewModel())
                 } label: {
                     Image(systemName: "camera.fill")
                         .foregroundColor(.black)

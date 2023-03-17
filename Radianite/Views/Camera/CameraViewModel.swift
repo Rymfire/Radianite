@@ -7,13 +7,14 @@
 
 import Foundation
 import AVFoundation
+import SwiftUI
 
-class CameraViewModel: ViewModel {
+class CameraViewModel: NSObject, ViewModel, AVCapturePhotoCaptureDelegate {
     @Published var isPictureTaken = false
     @Published var session = AVCaptureSession()
     @Published var alertPermissionDenied = false
     @Published var output = AVCapturePhotoOutput()
-    @Published var capturePreview: AVCaptureVideoPreviewLayer?
+    @Published var preview: AVCaptureVideoPreviewLayer?
 
     init(preview: AVCaptureVideoPreviewLayer? = nil) {
         self.preview = preview
@@ -65,4 +66,33 @@ class CameraViewModel: ViewModel {
             print(error.localizedDescription)
         }
     }
+
+    func takePicture() {
+        DispatchQueue.global(qos: .background).async {
+            self.output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
+            self.session.stopRunning()
+
+            DispatchQueue.main.async {
+                withAnimation { self.isPictureTaken.toggle() }
+            }
+        }
+    }
+
+    func reTakePicture() {
+        DispatchQueue.global(qos: .background).async {
+            self.session.startRunning()
+            DispatchQueue.main.async {
+                withAnimation { self.isPictureTaken.toggle() }
+            }
+        }
+    }
+
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if error != nil { return }
+
+        print("[LOG] Photo taken.")
+    }
 }
+
+
+// TODO: Continue at https://youtu.be/8hvaniprctk?t=680
