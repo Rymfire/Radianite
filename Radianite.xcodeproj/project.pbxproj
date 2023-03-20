@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0216354D29068644002321DF /* AgentDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216354C29068644002321DF /* AgentDetailsView.swift */; };
 		025D57AA2912B09400DD9B66 /* AbilitiesTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025D57A92912B09400DD9B66 /* AbilitiesTabs.swift */; };
+		026DD64629C89EC100295E33 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD64529C89EC100295E33 /* Error.swift */; };
 		027E63C229B623100077A1CC /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027E63C129B623100077A1CC /* CameraView.swift */; };
 		027E63C629B6271A0077A1CC /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027E63C529B6271A0077A1CC /* CameraViewModel.swift */; };
 		0293633F290696F5007C8839 /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0293633E290696F5007C8839 /* ColorExt.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		0216354C29068644002321DF /* AgentDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentDetailsView.swift; sourceTree = "<group>"; };
 		025D57A92912B09400DD9B66 /* AbilitiesTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilitiesTabs.swift; sourceTree = "<group>"; };
+		026DD64529C89EC100295E33 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		027E63C129B623100077A1CC /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		027E63C529B6271A0077A1CC /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		0293633E290696F5007C8839 /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
@@ -162,7 +164,7 @@
 				02D8E83528FE97AD006ACD69 /* App */,
 				02D8E83428FE979E006ACD69 /* Views */,
 				02D8E83328FE9795006ACD69 /* Models */,
-				02D8E83228FE9782006ACD69 /* Services */,
+				02D8E83228FE9782006ACD69 /* Network */,
 				02D8E80B28FDB4A4006ACD69 /* Assets.xcassets */,
 				02D8E80D28FDB4A4006ACD69 /* Radianite.entitlements */,
 				02D8E80E28FDB4A4006ACD69 /* Preview Content */,
@@ -195,13 +197,14 @@
 			path = RadianiteUITests;
 			sourceTree = "<group>";
 		};
-		02D8E83228FE9782006ACD69 /* Services */ = {
+		02D8E83228FE9782006ACD69 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				02D8E83828FE9F68006ACD69 /* AgentService.swift */,
 				02D8E84128FEE6D7006ACD69 /* Endpoint.swift */,
+				026DD64529C89EC100295E33 /* Error.swift */,
 			);
-			path = Services;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		02D8E83328FE9795006ACD69 /* Models */ = {
@@ -386,6 +389,7 @@
 				02D8E80828FDB4A1006ACD69 /* RadianiteApp.swift in Sources */,
 				02D8E84228FEE6D7006ACD69 /* Endpoint.swift in Sources */,
 				027E63C629B6271A0077A1CC /* CameraViewModel.swift in Sources */,
+				026DD64629C89EC100295E33 /* Error.swift in Sources */,
 				02D8E84028FEA9FC006ACD69 /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,11 +14,6 @@ class CameraViewModel: NSObject, ViewModel, AVCapturePhotoCaptureDelegate {
     @Published var session = AVCaptureSession()
     @Published var alertPermissionDenied = false
     @Published var output = AVCapturePhotoOutput()
-    @Published var preview: AVCaptureVideoPreviewLayer?
-
-    init(preview: AVCaptureVideoPreviewLayer? = nil) {
-        self.preview = preview
-    }
 
     func checkAuthorization() {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
@@ -68,22 +63,24 @@ class CameraViewModel: NSObject, ViewModel, AVCapturePhotoCaptureDelegate {
     }
 
     func takePicture() {
-        DispatchQueue.global(qos: .background).async {
+        Task.detached(priority: .background) {
             self.output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
             self.session.stopRunning()
-
-            DispatchQueue.main.async {
-                withAnimation { self.isPictureTaken.toggle() }
-            }
+            await self.animateToggle()
         }
     }
 
     func reTakePicture() {
-        DispatchQueue.global(qos: .background).async {
+        Task.detached(priority: .background) {
             self.session.startRunning()
-            DispatchQueue.main.async {
-                withAnimation { self.isPictureTaken.toggle() }
-            }
+            await self.animateToggle()
+        }
+    }
+
+    @MainActor
+    func animateToggle() {
+        Task {
+            withAnimation { self.isPictureTaken.toggle() }
         }
     }
 

@@ -12,15 +12,15 @@ class AgentsViewModel: ViewModel { // TODO: tests
 
     let service = AgentService()
 
+    @MainActor
     func getAgents() async {
-        await service.getAgents { result in
-            switch result {
-            case .success(let agentsData):
-                self.agents = agentsData
-            case .failure(_):
-                // error handling
-                return
-            }
+        let result = await service.getAgents()
+        switch result {
+        case .success(let agentsData):
+            self.agents = agentsData
+        case .failure(let error):
+            print(error.localizedDescription)
+            return
         }
     }
 }
